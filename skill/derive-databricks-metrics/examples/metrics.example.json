@@ -1,0 +1,516 @@
+{
+  "coverage": {
+    "available": [
+      "A4",
+      "A5",
+      "A6",
+      "B1",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "C1",
+      "C10",
+      "C12",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "D1",
+      "D12",
+      "D13",
+      "D14",
+      "D2",
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "D8",
+      "D9",
+      "I5",
+      "I6"
+    ],
+    "unavailable": [
+      "B2",
+      "C8",
+      "C9",
+      "F1"
+    ]
+  },
+  "job": {
+    "application_ids": [
+      "706963117312801274"
+    ],
+    "cluster_id": "1103-055500-ru6k4174",
+    "event_log_dir": "dbfs:/tmp/benchmark-event-log-word-count-long-photon-20261103",
+    "job_id": "444626172950608",
+    "job_name": "benchmark-event-log-word-count-long-photon",
+    "profile": "fe-vm-classic-stable-vx5v2m",
+    "result_state": "SUCCESS",
+    "run_id": "89830100569270",
+    "runtime_engine": "PHOTON",
+    "spark_version": "16.4.x-scala2.13"
+  },
+  "metrics": {
+    "A4": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Run ID",
+      "metric_id": "A4",
+      "source": "Jobs API run_id",
+      "value": "89830100569270"
+    },
+    "A5": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Spark application ID(s)",
+      "metric_id": "A5",
+      "source": "cluster_instance.spark_context_id / event-log app id",
+      "value": [
+        "706963117312801274"
+      ]
+    },
+    "A6": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Cluster ID",
+      "metric_id": "A6",
+      "source": "run cluster_instance.cluster_id",
+      "value": "1103-055500-ru6k4174"
+    },
+    "B1": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Submit/start time (ms)",
+      "metric_id": "B1",
+      "source": "platform start-time proxy",
+      "value": 1793685299502
+    },
+    "B2": {
+      "availability": "unavailable",
+      "cross_sources": null,
+      "evidence_category": "Cross-source-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": "Requires an external orchestrator submit timestamp.",
+      "metric": "Scheduler delay (s)",
+      "metric_id": "B2",
+      "source": "orchestrator submit vs platform start",
+      "value": null
+    },
+    "B3": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Cross-source-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Startup (s)",
+      "metric_id": "B3",
+      "source": "submit to first Spark task",
+      "value": 410.86
+    },
+    "B4": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Compute (s)",
+      "metric_id": "B4",
+      "source": "first task to last task",
+      "value": 688.612
+    },
+    "B5": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Cross-source-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Commit tail (s)",
+      "metric_id": "B5",
+      "source": "platform end minus last Spark task",
+      "value": 70.677
+    },
+    "B6": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "End-to-end (s)",
+      "metric_id": "B6",
+      "source": "platform end minus submit/start",
+      "value": 1170.149
+    },
+    "B7": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Attempts",
+      "metric_id": "B7",
+      "source": "control-plane task attempts",
+      "value": 1
+    },
+    "B8": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Result / failure",
+      "metric_id": "B8",
+      "source": "control-plane terminal state",
+      "value": {
+        "reason": null,
+        "state": "SUCCESS"
+      }
+    },
+    "C1": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": {
+        "nodes": 2
+      },
+      "limitation": null,
+      "metric": "Allocated vCPU-hours",
+      "metric_id": "C1",
+      "source": "system.compute.node_timeline minutes x node_types core_count",
+      "value": 2.533333
+    },
+    "C10": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Peak concurrent executors",
+      "metric_id": "C10",
+      "source": "executor add/remove events",
+      "value": 1
+    },
+    "C12": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Derived",
+      "evidence_reason": null,
+      "inputs": [
+        "C1",
+        "C3"
+      ],
+      "limitation": null,
+      "metric": "Idle capacity vCPU-hours",
+      "metric_id": "C12",
+      "source": "C1 allocated minus C3 task-runtime",
+      "value": 2.522084
+    },
+    "C2": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Allocated memory GiB-hours",
+      "metric_id": "C2",
+      "source": "system.compute.node_timeline minutes x node_types memory_mb",
+      "value": 19.3167
+    },
+    "C3": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Task-time core-hours",
+      "metric_id": "C3",
+      "source": "sum executor run time",
+      "value": 0.011249444444444444
+    },
+    "C4": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Task CPU-hours",
+      "metric_id": "C4",
+      "source": "sum executor CPU time",
+      "value": 0.004166351812777778
+    },
+    "C5": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "CPU/runtime ratio",
+      "metric_id": "C5",
+      "source": "event log",
+      "value": 0.3703606727739642
+    },
+    "C6": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "VM CPU % (avg)",
+      "metric_id": "C6",
+      "source": "system.compute.node_timeline cpu_user+cpu_system",
+      "value": 13.22
+    },
+    "C7": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "GC time %",
+      "metric_id": "C7",
+      "source": "event log",
+      "value": 0.2568028050767939
+    },
+    "C8": {
+      "availability": "unavailable",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Task slots",
+      "metric_id": "C8",
+      "source": "executor cores \u00d7 peak concurrent executors",
+      "value": null
+    },
+    "C9": {
+      "availability": "unavailable",
+      "cross_sources": null,
+      "evidence_category": "External evidence",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Memory per slot (GiB)",
+      "metric_id": "C9",
+      "source": "(executor memory + off-heap) / executor cores",
+      "value": null
+    },
+    "D1": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Input records",
+      "metric_id": "D1",
+      "source": "task input metrics",
+      "value": 0
+    },
+    "D12": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Stage count",
+      "metric_id": "D12",
+      "source": "distinct stage ids",
+      "value": 91
+    },
+    "D13": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Failed/speculative task attempts",
+      "metric_id": "D13",
+      "source": "task end events",
+      "value": {
+        "failed": 0,
+        "speculative": 0
+      }
+    },
+    "D14": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Output records / bytes",
+      "metric_id": "D14",
+      "source": "task output metrics",
+      "value": {
+        "bytes": 0,
+        "records": 0
+      }
+    },
+    "D2": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Input bytes",
+      "metric_id": "D2",
+      "source": "task input metrics",
+      "value": 0
+    },
+    "D4": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Shuffle write bytes",
+      "metric_id": "D4",
+      "source": "task shuffle metrics",
+      "value": 20838
+    },
+    "D5": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Shuffle read bytes",
+      "metric_id": "D5",
+      "source": "task shuffle metrics",
+      "value": 30804
+    },
+    "D6": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Shuffle fetch wait (ms)",
+      "metric_id": "D6",
+      "source": "task shuffle metrics",
+      "value": 0
+    },
+    "D7": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Disk spill bytes",
+      "metric_id": "D7",
+      "source": "task metrics",
+      "value": 0
+    },
+    "D8": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Memory spill bytes",
+      "metric_id": "D8",
+      "source": "task metrics",
+      "value": 0
+    },
+    "D9": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Event-log-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "Peak task execution memory",
+      "metric_id": "D9",
+      "source": "task metrics",
+      "value": 67371008
+    },
+    "F1": {
+      "availability": "unavailable",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": "Accelerated engine needs operator/query-profile timing to prove time share.",
+      "metric": "Accelerated-engine time share",
+      "metric_id": "F1",
+      "source": "engine=PHOTON",
+      "value": null
+    },
+    "I5": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "DBU price tier / SKU",
+      "metric_id": "I5",
+      "source": "system.billing.usage sku_name",
+      "value": [
+        "ENTERPRISE_JOBS_COMPUTE_(PHOTON)"
+      ]
+    },
+    "I6": {
+      "availability": "available",
+      "cross_sources": null,
+      "evidence_category": "Platform-derived",
+      "evidence_reason": null,
+      "inputs": null,
+      "limitation": null,
+      "metric": "DBUs",
+      "metric_id": "I6",
+      "source": "system.billing.usage usage_quantity by job_run_id",
+      "value": {
+        "by_sku": {
+          "ENTERPRISE_JOBS_COMPUTE_(PHOTON)": 1.521465
+        },
+        "total": 1.521465
+      }
+    }
+  },
+  "warnings": []
+}
